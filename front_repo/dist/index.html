@@ -22,9 +22,9 @@
           document.getElementById('data_json').innerHTML = JSON.stringify(json);
       });
 
-    const local_tgbot_url = "http://127.0.0.1:6000/tgbot/"  // tg
-    const dev_tgbot_url = "http://127.0.0.1:6000/tgbot/"    // tg
-    const prod_tgbot_url = "http://127.0.0.1:6000/tgbot/"   // tg
+    const local_tgbot_url = "http://127.0.0.1:6000/rand/"  // tg
+    const dev_tgbot_url = "http://127.0.0.1:6000/rand/"    // tg
+    const prod_tgbot_url = "http://127.0.0.1:6000/rand/"   // tg
     fetch(dev_tgbot_url, requestOptions)
   .then(response => response.json())
       .then(json => {
