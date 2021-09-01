@@ -12,10 +12,10 @@ services:
       - 8080:8080
     network_mode: backend_repo_back
 
-  certbot:
-    image: certbot/certbot
-    restart: unless-stopped
-    volumes:
-      - ./nginx/prod/certbot/prod/conf:/etc/letsencrypt
-      - ./nginx/prod/certbot/prod/www:/var/www/certbot
-    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+#  certbot:
+#    image: certbot/certbot
+#    restart: unless-stopped
+#    volumes:
+#      - ./nginx/prod/certbot/prod/conf:/etc/letsencrypt
+#      - ./nginx/prod/certbot/prod/www:/var/www/certbot
+#    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
