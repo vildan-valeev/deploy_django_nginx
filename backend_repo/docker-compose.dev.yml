@@ -19,7 +19,7 @@ services:
       dockerfile: Dockerfile.dev
     container_name: rand
     volumes:
-      - ./tg/:/usr/src/app/
+      - ./rand/:/usr/src/app/
     restart: always
     networks:
       - back
