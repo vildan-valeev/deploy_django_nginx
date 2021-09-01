@@ -1,4 +1,4 @@
-FROM nginx:latest
+FROM nginx:1.19.0-alpine
 RUN mkdir /app
 COPY /dist /app
 
@@ -9,4 +9,4 @@ EXPOSE 8080 80 443 8000 6000
 ## run
 #CMD ["/app/init-ssl.sh"]
 
-CMD ["nginx", "-g", "daemon off;"]
+#CMD ["nginx", "-g", "daemon off;"]
