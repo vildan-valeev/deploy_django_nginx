@@ -14,6 +14,14 @@ async def handle(request: web.Request) -> web.Response:
                         content_type='text/html')  # status=200
 
 
+@routes.get('/tik/')
+async def handle(request: web.Request) -> web.Response:
+    """Получаем апдейты"""
+
+    return web.Response(status=200, text=f'tik',
+                        )  # status=200
+
+
 app.add_routes(routes)
 
 if __name__ == '__main__':

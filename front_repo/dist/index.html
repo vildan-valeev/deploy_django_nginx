@@ -21,10 +21,11 @@
       .then(json => {
           document.getElementById('data_json').innerHTML = JSON.stringify(json);
       });
-
-    const local_tgbot_url = "http://127.0.0.1:6000/rand/"  // tg
-    const dev_tgbot_url = "http://127.0.0.1:6000/rand/"    // tg
-    const prod_tgbot_url = "http://127.0.0.1:6000/rand/"   // tg
+</script>
+<script>
+    const local_tgbot_url = "http://127.0.0.1:8000/api/tik/"  // tg
+    const dev_tgbot_url = "http://127.0.0.1:8000/api/tik/"    // tg
+    const prod_tgbot_url = "http://127.0.0.1:8000/api/tik/"   // tg
     fetch(dev_tgbot_url, requestOptions)
   .then(response => response.json())
       .then(json => {
