@@ -1,30 +1,20 @@
-settings frontend
+# Settings backend
 
-### 1. First.
+# Deploy
 
-Налить кофе, помыть руки
+## dev
 
-### 2. Development
-`chmod +x start_dev.sh`
-
-```
-docker-compose -f docker-compose-dev.yml up --build
-
+```sh
+$ docker-compose -f docker-compose.dev.yml up -d --build
 ```
 
-### 3. Production
-`cd backend`
-
-`chmod +x start_prod.sh`
-
-`cd ..`
-
-
-```
-docker-compose up --build
+## prod
+```sh
+$ docker-compose up -d --build
 ```
 
 ```docker exec -it <id container> bash
+
     docker exec -it <id container> <command>
 
 ```
