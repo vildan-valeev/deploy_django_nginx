@@ -12,9 +12,8 @@ $ docker-compose -f docker-compose.dev.yml up -d --build
 ```sh
 $ docker-compose up -d --build
 ```
-
-```sh
 ## Enter to container
+```sh
 $ docker exec -it <id container or name> bash
 $ docker exec -it <id container or name> <command>
 ```

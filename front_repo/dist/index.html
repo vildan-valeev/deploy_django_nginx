@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3 id="data_json"></h3>
+
+<h3 id="random"></h3>
+<script>
+    const requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+    };
+    const local_url = "http://127.0.0.1:8000/api/foo/1/"   // backend
+    const dev_url = "http://127.0.0.1:8000/api/foo/1/"     // backend
+    const prod_url = "http://127.0.0.1:8000/api/foo/1/"    // backend
+    fetch(dev_url, requestOptions)
+  .then(response => response.json())
+      .then(json => {
+          document.getElementById('data_json').innerHTML = JSON.stringify(json);
+      });
+
+    const local_tgbot_url = "http://127.0.0.1:6000/tgbot/"  // tg
+    const dev_tgbot_url = "http://127.0.0.1:6000/tgbot/"    // tg
+    const prod_tgbot_url = "http://127.0.0.1:6000/tgbot/"   // tg
+    fetch(dev_tgbot_url, requestOptions)
+  .then(response => response.json())
+      .then(json => {
+          document.getElementById('random').innerHTML = JSON.stringify(json);
+      });
+</script>
+</body>
+</html>
