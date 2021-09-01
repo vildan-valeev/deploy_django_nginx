@@ -1,0 +1,8 @@
+Django
+django-cors-headers
+djangorestframework
+drf-yasg
+requests
+environs
+gunicorn
+
