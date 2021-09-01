@@ -1,5 +1,5 @@
 # pull official base image
-FROM python:3.8.3
+FROM python:3.8
 
 # set work directory
 WORKDIR /app
@@ -10,14 +10,20 @@ ENV PYTHONUNBUFFERED 1
 
 # install psycopg2 dependencies
 #RUN apk update \
-#    && apk add postgresql-dev gcc libressl-dev libffi-dev python3-dev musl-dev zlib-dev jpeg-dev cargo libmagic
+#    && apk add postgresql-dev gcc python3-dev musl-dev
 
 # install dependencies
 RUN pip install --upgrade pip
 COPY ./requirements.txt .
 RUN pip install -r requirements.txt
+
+# copy entrypoint.sh
+COPY entrypoint_dev.sh .
+
 # copy project
 COPY . .
-RUN chmod +x ./entrypoint.sh
-# run
+
+# run entrypoint.sh
+RUN chmod +x /app/entrypoint.sh
+#
 ENTRYPOINT ["/app/entrypoint.sh"]
