@@ -5,6 +5,7 @@ if ! [ -x "$(command -v docker-compose)" ]; then
   exit 1
 fi
 
+
 domains=(calendarbot.net www.calendarbot.net)
 rsa_key_size=4096
 data_path="./nginx/prod/certbot"
